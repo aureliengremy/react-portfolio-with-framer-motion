@@ -16,14 +16,14 @@ const Landing = ({ setSelectedPage }) => {
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 
-                before:-left-20 before:rounded-t-[400px] before:rounded-b-[400px] before:w-full before:max-w-[400px] 
+                before:-left-20 before:rounded-t-[400px] before:rounded-b-[400px] before:w-full before:max-w-[500px]
                 before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
           >
             <img
               src="../assets/profile-heigh-full.jpg"
               alt="profil"
               className="hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
-                    w-full max-w-[300px] md:max-w-[600px]"
+                    w-full max-w-[300px] md:max-w-[550px]"
             />
           </div>
         ) : (
