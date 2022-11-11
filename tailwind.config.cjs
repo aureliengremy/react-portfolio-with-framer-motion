@@ -7,12 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: "#2CBCE9",
         red: "#DC4492",
         yellow: "#FDCC49",
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
+        "deep-blue": "#010026",
       },
       backgroundImage: (theme) => ({
         "gradient-rainbow":
@@ -20,13 +20,19 @@ module.exports = {
 
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+
+        "gradient-rainorange":
+          "radial-gradient(circle, rgba(252,239,70,1) 0%, rgba(242,144,0,1) 70%);",
+
+        "gradient-rainorange-reverse":
+          "radial-gradient(circle, rgba(242,144,0,1) 30%, rgba(252,239,70,1) 100%);",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
       content: {
-        brush: "url('./assets/brush.png')",
+        brush: "url('./assets/orange-brush.png')",
         person1: "url('./assets/person-1.png')",
         person2: "url('./assets/person-2.png')",
         person3: "url('./assets/person-3.png')",
