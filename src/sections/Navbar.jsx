@@ -6,8 +6,8 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""} 
-        hover:text-yellow transition duration-500`}
+      className={`${selectedPage === lowerCasePage ? "text-orange-400" : ""} 
+        hover:text-orange-500 transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -19,10 +19,10 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px");
-  const navbarbgcolor = isTopOfPage ? '' : "bg-indigo-900"
+  const navbarbgcolor = isTopOfPage ? '' : "bg-deep-blue"
 
   return (
-    <nav className={`${navbarbgcolor} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarbgcolor} z-40 w-full fixed top-0 py-6 md:opacity-80 md:hover:opacity-100 transition duration-400`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-playfair text-3xl font-bold">AG</h4>
 
@@ -65,7 +65,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         )}
         {/* MENU MOBILE - Popup */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-indigo-900 w-[300px]">
+          <div className="fixed right-0 bottom-0 h-full bg-lighter-deep-blue w-[300px]">
             {/* CLOSE ICON */}
             <div className="flex justify-end p-12">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
