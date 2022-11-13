@@ -25,7 +25,8 @@ const projectVariant = {
 const Project = ({ title }) => {
   const overlayStyles = `absolute h-full opacity-0 hover:opacity-90 transition 
     duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
+  const projectTitle = title.split(" ").join("_").toLowerCase();
+
   return (
     <motion.div className="relative" variants={projectVariant}>
       <div className={overlayStyles}>
@@ -37,7 +38,7 @@ const Project = ({ title }) => {
           provident numquam, tenetur quos.
         </p>
       </div>
-      <img src={`..assets/${projectTitle}.png`} alt={`${title} screenshot`} />
+      <img className="object-cover" src={`../assets/${projectTitle}.png`} alt={`${title} screenshot`} />
     </motion.div>
   );
 };
@@ -83,28 +84,43 @@ const Projects = () => {
         >
           <div
             className="flex justify-center text-center items-center p-10 
-          bg-orange-400 max-w-[600px] max-h-[600px] text-2xl font-playfair font-semibold"
+          bg-orange-400 max-w-[800px] max-h-[600px] text-2xl font-semibold"
           >
-            BEAUTIFUL USER INTERFACE
+            SM360
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
-
+          <Project title="Grenier Chevrolet Buick GMC"/>
           {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
-
-          {/* ROW 2 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
+          <Project title="Lallier SteFoy Honda" />
+          <Project title="Toyota Lachute" />
 
           <div
             className="flex justify-center text-center items-center p-10 
-          bg-orange-800 max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+          bg-orange-700 max-w-[800px] max-h-[600px] text-2xl font-semibold"
           >
-            SMOOTH USER INTERFACE
+            LE WAGON
           </div>
+          <Project title="NightSkyper" />
+          <Project title="RentALife" />
+          <div
+            className="flex justify-center text-center items-center p-10 
+           max-w-[800px] max-h-[600px] text-2xl font-semibold"
+          ></div>
+
+          <div
+            className="flex justify-center text-center items-center p-10 
+          bg-orange-500 max-w-[800px] max-h-[600px] text-2xl font-semibold"
+          >
+            For Myself
+          </div>
+          <Project title="Marvel Quiz App" />
+          <div
+            className="flex justify-center text-center items-center p-10 
+          bg-orange-900 max-w-[800px] max-h-[600px] text-2xl font-semibold"
+          >
+            CMS
+          </div>
+          <Project title="Project 7" />
+
           
         </motion.div>
       </div>
