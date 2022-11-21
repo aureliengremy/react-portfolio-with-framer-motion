@@ -73,11 +73,22 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img
-            className="object-cover"
-            src="../assets/Lewagon-4-W-Blur-r.png"
-            alt="contact image"
-          />
+          <div
+            className="relative z-0 ml-20 before:absolute before:-top-10 
+                        before:-right-10 before:w-full before:h-full before:border-2
+                      before:border-orange-400 before:z-[-1]"
+          >
+            {/* <motion.div   
+            animate={{ scale: [1, 0.98, 1]  }}
+            transition={{ repeat: Infinity, duration: 5 }}> */}
+            <img
+              className="object-cover ease-linear duration-500 hover:ml-4 hover:mt-4 hover:mr-4"
+              src="../assets/Lewagon-4-W-Blur-r.png"
+              alt="contact image"
+            />
+
+            {/* </motion.div> */}
+          </div>
         </motion.div>
         <div className="basis-1/2 md:flex md:justify-between gap-16 mt-5">
           <motion.div

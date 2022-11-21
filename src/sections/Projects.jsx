@@ -28,7 +28,7 @@ const Project = ({ title }) => {
   const projectTitle = title.split(" ").join("_").toLowerCase();
 
   return (
-    <motion.div className="relative" variants={projectVariant}>
+    <motion.div className="relative h-auto" variants={projectVariant}>
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7">
@@ -38,7 +38,11 @@ const Project = ({ title }) => {
           provident numquam, tenetur quos.
         </p>
       </div>
-      <img className="object-cover" src={`../assets/${projectTitle}.png`} alt={`${title} screenshot`} />
+      <img
+        className="object-cover"
+        src={`../assets/${projectTitle}.png`}
+        alt={`${title} screenshot`}
+      />
     </motion.div>
   );
 };
@@ -74,56 +78,54 @@ const Projects = () => {
         </p>
       </motion.div>
       {/* PROJECTS */}
-      <div className="flex justify-center">
-        <motion.div
-          className="sm:grid sm:grid-cols-2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={motionContainer}
-        >
-          <div
-            className="flex justify-center text-center items-center p-10 
-          bg-orange-400 max-w-[800px] max-h-[600px] text-2xl font-semibold"
+        <div className="flex justify-center">
+          <motion.div
+            className="sm:grid sm:grid-cols-2 xl:grid-cols-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={motionContainer}
           >
-            SM360
-          </div>
-          <Project title="Grenier Chevrolet Buick GMC"/>
-          {/* ROW 2 */}
-          <Project title="Lallier SteFoy Honda" />
-          <Project title="Toyota Lachute" />
+            <div
+              className="flex justify-center text-center items-center p-10 
+          bg-orange-400 max-h-[600px] text-2xl font-semibold"
+            >
+              SM360
+            </div>
+            <Project title="Grenier Chevrolet Buick GMC" />
+            {/* ROW 2 */}
+            <Project title="Lallier SteFoy Honda" />
+            <Project title="Toyota Lachute" />
 
-          <div
-            className="flex justify-center text-center items-center p-10 
-          bg-orange-700 max-w-[800px] max-h-[600px] text-2xl font-semibold"
-          >
-            LE WAGON
-          </div>
-          <Project title="NightSkyper" />
-          <Project title="RentALife" />
-          <div
-            className="flex justify-center text-center items-center p-10 
-           max-w-[800px] max-h-[600px] text-2xl font-semibold"
-          ></div>
+            <div
+              className="flex justify-center text-center items-center p-10 
+          bg-orange-700 max-h-[600px] text-2xl font-semibold"
+            >
+              LE WAGON
+            </div>
+            <Project title="NightSkyper" />
+            <Project title="RentALife" />
+            {/* <div
+              className="flex justify-center text-center items-center p-10 
+           max-h-[600px] text-2xl font-semibold"
+            ></div> */}
 
-          <div
-            className="flex justify-center text-center items-center p-10 
-          bg-orange-500 max-w-[800px] max-h-[600px] text-2xl font-semibold"
-          >
-            For Myself
-          </div>
-          <Project title="Marvel Quiz App" />
-          <div
-            className="flex justify-center text-center items-center p-10 
-          bg-orange-900 max-w-[800px] max-h-[600px] text-2xl font-semibold"
-          >
-            CMS
-          </div>
-          <Project title="Project 7" />
-
-          
-        </motion.div>
-      </div>
+            <div
+              className="flex justify-center text-center items-center p-10 
+          bg-orange-500 max-h-[600px] text-2xl font-semibold"
+            >
+              For Myself
+            </div>
+            <Project title="Marvel Quiz App" />
+            <div
+              className="flex justify-center text-center items-center p-10 
+          bg-orange-900 max-h-[600px] text-2xl font-semibold"
+            >
+              CMS
+            </div>
+            <Project title="Project 7" />
+          </motion.div>
+        </div>
     </section>
   );
 };
