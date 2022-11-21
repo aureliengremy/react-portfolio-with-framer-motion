@@ -76,16 +76,16 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          <a
             className="bg-gradient-rainorange text-deep-blue rounded-sm py-3 px-7 font-semibold 
             hover:bg-gradient-rainorange-reverse hover:text-grey"
-            onClick={() => setSelectedPage("contact")}
+            href="#contact"
           >
             Contact Me
-          </AnchorLink>
-          <AnchorLink
+          </a>
+          <a
             className="rounded-r-sm bg-gradient-rainorange py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
+            href="#contact"
           >
             <div
               className="bg-deep-blue hover:text-orange-400 transition duration-500 w-full h-full
@@ -93,7 +93,7 @@ const Landing = ({ setSelectedPage }) => {
             >
               Let's talk
             </div>
-          </AnchorLink>
+          </a>
         </motion.div>
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
