@@ -36,14 +36,14 @@ const MySkills = () => {
                       before:border-orange-400 before:z-[-1]"
             >
               <img
-                src="../assets/skills-image.png"
+                src="../assets/Lewagon-39-c-r.png"
                 alt="skills"
                 className="z-10"
               />
             </div>
           ) : (
             <img
-              src="../assets/skills-image.png"
+              src="../assets/Lewagon-39-c-r.png"
               alt="skills"
               className="z-10"
             />

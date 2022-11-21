@@ -28,7 +28,7 @@ const Landing = ({ setSelectedPage }) => {
           </div>
         ) : (
           <img
-            src="../assets/profile-heigh-full.jpg"
+            src="../assets/profile-sit.jpeg"
             alt="profil"
             className="hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
                     w-full max-w-[400px] md:max-w-[600px]"

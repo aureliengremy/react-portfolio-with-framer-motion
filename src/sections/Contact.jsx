@@ -10,21 +10,37 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e) => {
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    } else {
-        console.log('SEND!');
+  // const onSubmit = async (e) => {
+  //   const isValid = await trigger();
+  //   if (!isValid) {
+  //     e.preventDefault();
+  //   } else {
+  //       console.log('SEND!');
 
-    }
+  //   }
+  // };
+  const onSubmit = () => {
+    fetch("https://formsubmit.co/ajax/zodexa", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: "FormSubmit",
+        message: "I'm from Devro LABS",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
   };
 
   return (
     <section id="contact" className="py-48">
       {/* HEADING */}
       <motion.div
-      className="flex justify-end w-full"
+        className="flex justify-end w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -36,7 +52,8 @@ const Contact = () => {
       >
         <div>
           <p className="flex justify-end font-playfair font-semibold text-4xl">
-             <span className="text-orange-500 pr-2">CONTACT ME</span> TO GET STARTED
+            <span className="text-orange-500 pr-2">CONTACT ME</span> TO GET
+            STARTED
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -56,7 +73,11 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <img className="object-cover" src="../assets/contact-image.jpeg" alt="contact image" />
+          <img
+            className="object-cover"
+            src="../assets/Lewagon-4-W-Blur-r.png"
+            alt="contact image"
+          />
         </motion.div>
         <div className="basis-1/2 md:flex md:justify-between gap-16 mt-5">
           <motion.div
@@ -70,7 +91,32 @@ const Contact = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <form action="https://formsubmit.co/el/zodexa" onSubmit={onSubmit} method="POST">
+            {/* <form target="_blank" action="https://formsubmit.co/el/zodexa" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required/>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required/>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form> */}
+            <form
+              action="https://formsubmit.co/ajax/zodexa"
+              onSubmit={onSubmit}
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_token"
+                value="gh29HGwAUw3W25ewpNGObPgu2xoNsmcxt2NZaDkx"
+              />
               <input
                 type="text"
                 className="w-full bg-orange-200 text-gray-900 font-semibold placeholder-opaque-black p-3"
@@ -110,7 +156,7 @@ const Contact = () => {
                 placeholder="MESSAGE"
                 rows="4"
                 cols="50"
-                maxlength="2000"
+                maxLength="2000"
                 required
                 // {...register("message", {
                 //   required: true,
