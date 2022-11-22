@@ -88,7 +88,7 @@ const Projects = () => {
           >
             <div
               className="flex justify-center text-center items-center p-10 
-          bg-orange-400 max-h-[600px] text-2xl font-semibold"
+          bg-orange-400 max-w-[800px] max-h-[600px] text-2xl font-semibold"
             >
               SM360
             </div>
@@ -99,7 +99,7 @@ const Projects = () => {
 
             <div
               className="flex justify-center text-center items-center p-10 
-          bg-orange-700 max-h-[600px] text-2xl font-semibold"
+          bg-orange-700 max-w-[800px] max-h-[600px] text-2xl font-semibold"
             >
               LE WAGON
             </div>
@@ -107,19 +107,19 @@ const Projects = () => {
             <Project title="RentALife" />
             {/* <div
               className="flex justify-center text-center items-center p-10 
-           max-h-[600px] text-2xl font-semibold"
+           max-w-[800px] max-h-[600px] text-2xl font-semibold"
             ></div> */}
 
             <div
               className="flex justify-center text-center items-center p-10 
-          bg-orange-500 max-h-[600px] text-2xl font-semibold"
+          bg-orange-500 max-w-[800px] max-h-[600px] text-2xl font-semibold"
             >
               For Myself
             </div>
             <Project title="Marvel Quiz App" />
             <div
               className="flex justify-center text-center items-center p-10 
-          bg-orange-900 max-h-[600px] text-2xl font-semibold"
+          bg-orange-900 max-w-[800px] max-h-[600px] text-2xl font-semibold"
             >
               CMS
             </div>
