@@ -40,7 +40,6 @@ const Landing = ({ setSelectedPage }) => {
     // console.log("useEffect");
   }, [imgElement.current]);
 
-
   const handleMouseMove = (event) => {
     setImgX(event.clientX);
     setImgY(event.clientY);
@@ -57,60 +56,35 @@ const Landing = ({ setSelectedPage }) => {
       <div className="md:order-2 flex justify-center basis-6/12 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <div
-            class="card"
-            ref={imgElement}
-            onMouseMove={(ev) => handleMouseMove(ev)}
+            className="relative z-0 ml-20 before:absolute before:-top-10
+            before:-left-10 before:w-full before:max-w-[450px]
+            before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
           >
-            <div class="card__wrapper">
-              <div class="card__3d">
-                <div class="card__image">
-                  <img
-                    src="../assets/profile-heigh-full.jpg"
-                    alt=""
-                  />
+            <div
+              class="profile-card w-[320px] h-[460px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[750px]"
+              ref={imgElement}
+              onMouseMove={(ev) => handleMouseMove(ev)}
+            >
+              <div class="profile-card__wrapper">
+                <div class="profile-card__3d">
+                  <img src="../assets/profile-heigh-full.jpg" alt="" />
                 </div>
-                <div class="card__layer1"></div>
-                <div class="card__layer2"></div>
               </div>
             </div>
           </div>
         ) : (
-          // version CARRE
-          // <div
-          //   className="relative z-0 ml-20 before:absolute before:-top-10
-          //   before:-left-10 before:w-full before:max-w-[500px]
-          //   before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
-          // >
-          //   <img
-          //     ref={imgElement}
-          //     onMouseMove={(ev) => handleMouseMove(ev)}
-          //     src="../assets/profile-heigh-full.jpg"
-          //     alt="profil"
-          //     className="card-animation z-10
-          //           w-full max-w-[300px] md:max-w-[550px]"
-          //   />
-          // </div>
-          // Version RONDE
-          // <div
-          //   className="relative z-0 ml-20 before:absolute before:-top-20
-          //   before:-left-20 before:rounded-t-[400px] before:rounded-b-[400px] before:w-full before:max-w-[500px]
-          //   before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
-          // >
-          //   <img
-          //     ref={imgElement}
-          //     onMouseMove={(ev) => handleMouseMove(ev)}
-          //     src="../assets/profile-heigh-full.jpg"
-          //     alt="profil"
-          //     className="card-animation hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
-          //           w-full max-w-[300px] md:max-w-[550px]"
-          //   />
-          // </div>
-          <img
-            src="../assets/profile-sit.jpeg"
-            alt="profil"
-            className="hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
-                    w-full max-w-[400px] md:max-w-[600px]"
-          />
+          <div
+            className="relative z-0 m-10 ml-10 before:absolute before:-top-1
+            before:-left-5 before:w-[110%] before:max-w-[450px]
+            before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
+          >
+            <img
+              src="../assets/profile-sit.jpeg"
+              alt="profil"
+              className="hover:filter hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
+                      w-full max-w-[400px] md:max-w-[600px]"
+            />
+          </div>
         )}
       </div>
       <div className="z-30 basis-6/12 mt-12 md:mt-32">
