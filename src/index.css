@@ -43,9 +43,26 @@ body,
 }
 
 .card-animation {
-  /* transform: rotateY(45deg) rotateX(0deg); */
   transform: rotateY(var(--r-x)) rotateX(var(--r-y));
   /* position: absolute;
   inset: 0; 
   clip-path: inset(0 0 1px 0 round 49px); */
+}
+
+
+.card {
+  width: 380px;
+  height: 467px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card__wrapper {
+  perspective: 600px;
+  position: absolute;
+  inset: 0;
+}
+.card__3d {
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  position: absolute;
+  inset: 0;
 }

@@ -6,67 +6,46 @@ import { useRef, useState, useEffect } from "react";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  
-  const imgElement = useRef(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  
-  const [MousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [imgWidth, setImgWidth] = useState(0)
-  const [imgHeight, setImgHeight] = useState(0)
-  const [imgX, setImgX] = useState(0)
-  const [imgY, setImgY] = useState(0)
-  const [cliRect, setCliRect] = useState(0)
-  // console.log(MousePosition.x, MousePosition.y)
-  // console.log(imgWidth, imgHeight, cliRect)
 
-  let X = (MousePosition.x - cliRect.left) / imgWidth;
-  let Y = (MousePosition.y - cliRect.top) / imgHeight;
-  // console.log(X, Y)
-  let cX = cliRect.left + imgWidth / 2
-  let cY = cliRect.top + imgHeight / 2
-  console.log(cX, cY)
+  const imgElement = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [imgWidth, setImgWidth] = useState(0);
+  const [imgHeight, setImgHeight] = useState(0);
+  const [imgX, setImgX] = useState(0);
+  const [imgY, setImgY] = useState(0);
+  const [cliRect, setCliRect] = useState(0);
+
+  let X = (imgX - cliRect.left) / imgWidth;
+  let Y = (imgY - cliRect.top) / imgHeight;
 
   let rX = -(X - 0.5) * 26;
   let rY = (Y - 0.5) * 26;
-  // console.log(rX, rY)
 
-  // document.documentElement.style.setProperty("--x", 100 * MousePosition.x + "%");
-  // document.documentElement.style.setProperty("--y", 100 * MousePosition.y + "%");
-  document.documentElement.style.setProperty("--r-x", rX + "deg");
-  document.documentElement.style.setProperty("--r-y", rY + "deg");
-
-  
-  if(window.innerWidth !== windowWidth) {
+  if (window.innerWidth !== windowWidth) {
     setWindowWidth(window.innerWidth);
-    setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0)
-    setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0)
-    setImgX(imgElement.current ? imgElement.current.x : 0)
-    setImgY(imgElement.current ? imgElement.current.y : 0)
-    setCliRect(imgElement.current ? imgElement.current.getBoundingClientRect() : 0)
-    // console.log('x', imgElement.current ? imgElement.current.x : 0);
-    // console.log('y', imgElement.current ? imgElement.current.y : 0);
+    setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0);
+    setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0);
+    setCliRect(
+      imgElement.current ? imgElement.current.getBoundingClientRect() : 0
+    );
   }
   useEffect(() => {
-    console.log(imgElement)
-    setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0)
-    setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0)
-    setImgX(imgElement.current ? imgElement.current.x : 0)
-    setImgY(imgElement.current ? imgElement.current.y : 0)
-    setCliRect(imgElement.current ? imgElement.current.getBoundingClientRect() : 0)
-    console.log('useEffect')
+    console.log(imgElement.current);
+    setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0);
+    setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0);
+    setCliRect(
+      imgElement.current ? imgElement.current.getBoundingClientRect() : 0
+    );
+    // console.log("useEffect");
   }, [imgElement.current]);
 
 
-  // console.log(MousePosition)
-  // console.log(MousePosition.x - imgX)
-  // console.log(MousePosition.y - imgY)
-  // console.log(window.innerWidth)
-  
   const handleMouseMove = (event) => {
-    setMousePosition({ x: event.pageX, y: event.pageY });
+    setImgX(event.clientX);
+    setImgY(event.clientY);
+    document.documentElement.style.setProperty("--r-x", rX + "deg");
+    document.documentElement.style.setProperty("--r-y", rY + "deg");
   };
 
   return (
@@ -78,20 +57,54 @@ const Landing = ({ setSelectedPage }) => {
       <div className="md:order-2 flex justify-center basis-6/12 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 
-            before:-left-20 before:rounded-t-[400px] before:rounded-b-[400px] before:w-full before:max-w-[500px]
-            before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
+            class="card"
+            ref={imgElement}
+            onMouseMove={(ev) => handleMouseMove(ev)}
           >
-            <img
-              ref={imgElement}
-              onMouseMove={(ev) => handleMouseMove(ev)}
-              src="../assets/profile-heigh-full.jpg"
-              alt="profil"
-              className="card-animation hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
-                    w-full max-w-[300px] md:max-w-[550px]"
-            />
+            <div class="card__wrapper">
+              <div class="card__3d">
+                <div class="card__image">
+                  <img
+                    src="../assets/profile-heigh-full.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card__layer1"></div>
+                <div class="card__layer2"></div>
+              </div>
+            </div>
           </div>
         ) : (
+          // version CARRE
+          // <div
+          //   className="relative z-0 ml-20 before:absolute before:-top-10
+          //   before:-left-10 before:w-full before:max-w-[500px]
+          //   before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
+          // >
+          //   <img
+          //     ref={imgElement}
+          //     onMouseMove={(ev) => handleMouseMove(ev)}
+          //     src="../assets/profile-heigh-full.jpg"
+          //     alt="profil"
+          //     className="card-animation z-10
+          //           w-full max-w-[300px] md:max-w-[550px]"
+          //   />
+          // </div>
+          // Version RONDE
+          // <div
+          //   className="relative z-0 ml-20 before:absolute before:-top-20
+          //   before:-left-20 before:rounded-t-[400px] before:rounded-b-[400px] before:w-full before:max-w-[500px]
+          //   before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
+          // >
+          //   <img
+          //     ref={imgElement}
+          //     onMouseMove={(ev) => handleMouseMove(ev)}
+          //     src="../assets/profile-heigh-full.jpg"
+          //     alt="profil"
+          //     className="card-animation hover:filter rounded-t-[400px] rounded-b-[400px] hover:hue-rotate-30 hover:contrast-125 transition duration-500 z-10
+          //           w-full max-w-[300px] md:max-w-[550px]"
+          //   />
+          // </div>
           <img
             src="../assets/profile-sit.jpeg"
             alt="profil"
