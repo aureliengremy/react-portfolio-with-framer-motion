@@ -49,7 +49,7 @@ const Project = ({ title }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-48">
+    <section id="projects" className="py-16 md:py-32 lg:py-48 xl:py-52">
       {/* HEADING */}
       <motion.div
         className="md:w-2/4 mx-auto text-center"
