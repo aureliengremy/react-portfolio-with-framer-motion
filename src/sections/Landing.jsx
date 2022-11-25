@@ -60,12 +60,12 @@ const Landing = ({ setSelectedPage }) => {
             before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
           >
             <div
-              class="profile-card w-[320px] h-[460px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[750px]"
+              className="profile-card w-[320px] h-[460px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[750px]"
               ref={imgElement}
               onMouseMove={(ev) => handleMouseMove(ev)}
             >
-              <div class="profile-card__wrapper">
-                <div class="profile-card__3d">
+              <div className="profile-card__wrapper">
+                <div className="profile-card__3d">
                   <img src="../assets/profile-heigh-full.jpg" alt="" />
                 </div>
               </div>
