@@ -37,7 +37,6 @@ const Landing = ({ setSelectedPage }) => {
     setCliRect(
       imgElement.current ? imgElement.current.getBoundingClientRect() : 0
     );
-    // console.log("useEffect");
   }, [imgElement.current]);
 
   const handleMouseMove = (event) => {
@@ -128,16 +127,18 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <a
+          <AnchorLink
             className="bg-gradient-rainorange text-deep-blue rounded-sm py-3 px-7 font-semibold 
             hover:bg-gradient-rainorange-reverse hover:text-grey"
             href="#contact"
+            onClick={() => setSelectedPage(setSelectedPage)}
           >
             Contact Me
-          </a>
-          <a
+          </AnchorLink>
+          <AnchorLink
             className="rounded-r-sm bg-gradient-rainorange py-0.5 pr-0.5"
             href="#contact"
+            onClick={() => setSelectedPage(setSelectedPage)}
           >
             <div
               className="bg-deep-blue hover:text-orange-400 transition duration-500 w-full h-full
@@ -145,7 +146,7 @@ const Landing = ({ setSelectedPage }) => {
             >
               Let's talk
             </div>
-          </a>
+          </AnchorLink>
         </motion.div>
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
