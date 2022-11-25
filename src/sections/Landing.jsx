@@ -109,10 +109,8 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
           <p className="mt-14 mb-7 text-sm text-center mb:text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            voluptas rem at aliquam est impedit consequuntur vitae adipisci
-            veniam doloremque sunt debitis libero tempora ipsam, tenetur illo,
-            possimus necessitatibus sed.
+          Titulaire d’une maîtrise en e-Business et e-Marketing, complétée par ma passion pour Internet et l’informatique.
+          Curieux de toujours comprendre au mieux le fonctionnement des technologies du web.
           </p>
         </motion.div>
         {/* CALL TO ACTION */}
