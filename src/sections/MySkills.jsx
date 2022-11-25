@@ -25,7 +25,9 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Mes compétences acquisent en Back-end associer à mon appétence en
+            Front-end me permettent de me présenter comme un Developpeur
+            Full-stack.
           </p>
         </motion.div>
         <div className="mt-16 md:mt-0">
@@ -51,7 +53,7 @@ const MySkills = () => {
         </div>
       </div>
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-16 gap-16">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
@@ -67,17 +69,32 @@ const MySkills = () => {
           <div className="relative">
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+              <p className="font-playfair font-semibold text-2xl mt-3 min-h-[64px]">
+                Expériences Professionnelles
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-28 bg-orange-500 absolute right-0 top-0 z-[-1]" />
-            <p className="mt-5 md:mt-10">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
-              tenetur sed rem libero deserunt id tempora consectetur vero
-              laboriosam, quaerat ullam facere porro fugiat at dolore minus,
-              amet earum beatae.
-            </p>
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-500 absolute right-0 top-0 z-[-1]" />
+            <div className="mt-5 md:mt-10">
+              <p className="mt-1 md:mt-3 text-left">2020 / 2022</p>
+              <p className="mt-1 md:mt-3 text-center">
+                INTÉGRATEUR / DEV FRONT-END<br/>
+                 Solution Medias 360<br/>
+                 Montréal, CA
+              </p>
+              <p className="mt-1 md:mt-3 text-left">2017 / 2020</p>
+              <p className="mt-1 md:mt-3 text-center">
+              DEV FRONT-END<br/>
+              ALIZNET<br/>
+              Paris, FR puis Montréal, CA
+              </p>
+              <p className="mt-1 md:mt-3 text-left">2014 / 2017</p>
+              <p className="mt-1 md:mt-3 text-center">
+              CHEF DE PROJET WEB<br/>
+              DEFI-PERFORMANCE<br/>
+              Champagne sur Seine, FR
+              </p>
+            
+            </div>
           </div>
         </motion.div>
         {/* INNOVATIVE */}
@@ -95,11 +112,11 @@ const MySkills = () => {
           <div className="relative">
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
-                Innovation
+              <p className="font-playfair font-semibold text-2xl mt-3 min-h-[64px]">
+                Formation
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-28 bg-orange-300 absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-300 absolute right-0 top-0 z-[-1]" />
             <p className="mt-5 md:mt-10">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
               tenetur sed rem libero deserunt id tempora consectetur vero
@@ -122,11 +139,11 @@ const MySkills = () => {
           <div className="relative">
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+              <p className="font-playfair font-semibold text-2xl mt-3 min-h-[64px]">
+                Passion
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-28 bg-orange-700 absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-700 absolute right-0 top-0 z-[-1]" />
             <p className="mt-5 md:mt-10">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
               tenetur sed rem libero deserunt id tempora consectetur vero
