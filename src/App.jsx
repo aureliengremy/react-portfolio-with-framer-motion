@@ -8,6 +8,7 @@ import Contact from "./sections/Contact";
 import LineGradient from "./components/LineGradient";
 import { useEffect } from "react";
 import Projects from "./sections/Projects";
+import ContextProvider from "./context/langContext";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -24,34 +25,36 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
-      <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediumScreens && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
-        <Landing setSelectedPage={setSelectedPage} />
+    <ContextProvider>
+      <div className="app bg-deep-blue">
+        <Navbar
+          isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+        <div className="w-5/6 mx-auto md:h-full">
+          {isAboveMediumScreens && (
+            <DotGroup
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          )}
+          <Landing setSelectedPage={setSelectedPage} />
+        </div>
+        <LineGradient />
+        <div className="w-5/6 mx-auto md:h-max">
+          <MySkills />
+        </div>
+        <LineGradient />
+        <div className="w-5/6 mx-auto md:h-max">
+          <Projects />
+        </div>
+        <LineGradient />
+        <div className="w-5/6 mx-auto md:h-full">
+          <Contact />
+        </div>
       </div>
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-max">
-        <MySkills />
-      </div>
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-max">
-        <Projects />
-      </div>
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
-        <Contact />
-      </div>
-    </div>
+    </ContextProvider>
   );
 }
 

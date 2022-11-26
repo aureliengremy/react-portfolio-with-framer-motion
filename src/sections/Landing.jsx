@@ -2,9 +2,13 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import { Context } from '../context/langContext';
+import data from '../assets/contentData';
 
 const Landing = ({ setSelectedPage }) => {
+  const { lang } = useContext(Context);
+
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   const imgElement = useRef(null);
@@ -31,7 +35,7 @@ const Landing = ({ setSelectedPage }) => {
     );
   }
   useEffect(() => {
-    console.log(imgElement.current);
+    // console.log(imgElement.current);
     setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0);
     setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0);
     setCliRect(
@@ -109,8 +113,7 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
           <p className="mt-14 mb-7 text-sm text-center mb:text-start">
-          Titulaire d’une maîtrise en e-Business et e-Marketing, complétée par ma passion pour Internet et l’informatique.
-          Curieux de toujours comprendre au mieux le fonctionnement des technologies du web.
+          {data[lang].landing.description}
           </p>
         </motion.div>
         {/* CALL TO ACTION */}
