@@ -2,9 +2,60 @@ import React from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
+import illustrator from "../assets/comp-icones/adobe-illustrator.png";
+import photoshop from "../assets/comp-icones/adobe-photoshop.png";
+import xd from "../assets/comp-icones/adobe-xd.png";
+import figma from "../assets/comp-icones/figma.png";
+import html from "../assets/comp-icones/html-5.png";
+import javascript from "../assets/comp-icones/javascript.png";
+import linux from "../assets/comp-icones/linux.png";
+import notion from "../assets/comp-icones/notion.png";
+import raspberry from "../assets/comp-icones/raspberry.png";
+import react from "../assets/comp-icones/react.png";
+import ruby from "../assets/comp-icones/ruby.png";
+import sass from "../assets/comp-icones/sass.png";
+import git from "../assets/comp-icones/git.png";
+import github from "../assets/comp-icones/github.png";
+import gitlab from "../assets/comp-icones/gitlab.png";
+import heroku from "../assets/comp-icones/heroku.png";
+import intellij from "../assets/comp-icones/intellij.png";
+import java from "../assets/comp-icones/java.png";
+import sql from "../assets/comp-icones/sql.png";
+import tailwind from "../assets/comp-icones/tailwind-css.png";
+import vscode from "../assets/comp-icones/vscode.png";
+import Skill from "../components/Skill";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  const langages = [
+    { icone: html, name: "html" },
+    { icone: sass, name: "sass" },
+    { icone: ruby, name: "ruby" },
+    { icone: javascript, name: "javascript" },
+    { icone: react, name: "react" },
+    { icone: git, name: "git" },
+    { icone: java, name: "java" },
+    { icone: sql, name: "sql" },
+    { icone: tailwind, name: "tailwind" },
+  ];
+  const tools = [
+    { icone: linux, name: "linux" },
+    { icone: notion, name: "notion" },
+    { icone: raspberry, name: "raspberry" },
+    { icone: github, name: "github" },
+    { icone: gitlab, name: "gitlab" },
+    { icone: heroku, name: "heroku" },
+    { icone: intellij, name: "intellij" },
+    { icone: vscode, name: "vscode" },
+  ];
+  const designs = [
+    { icone: illustrator, name: "illustrator" },
+    { icone: photoshop, name: "photoshop" },
+    { icone: xd, name: "xd" },
+    { icone: figma, name: "figma" },
+  ];
+
   return (
     <section id="skills" className="py-16 md:py-32 lg:py-48 xl:py-52">
       <div className="md:flex md:justify-between md:gap-16">
@@ -75,25 +126,36 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-orange-500 absolute right-0 top-0 z-[-1]" />
             <div className="mt-5 md:mt-10">
-              <p className="mt-1 md:mt-3 text-left">2020 / 2022</p>
-              <p className="mt-1 md:mt-3 text-center">
-                INTÉGRATEUR / DEV FRONT-END<br/>
-                 Solution Medias 360<br/>
-                 Montréal, CA
-              </p>
-              <p className="mt-1 md:mt-3 text-left">2017 / 2020</p>
-              <p className="mt-1 md:mt-3 text-center">
-              DEV FRONT-END<br/>
-              ALIZNET<br/>
-              Paris, FR puis Montréal, CA
-              </p>
-              <p className="mt-1 md:mt-3 text-left">2014 / 2017</p>
-              <p className="mt-1 md:mt-3 text-center">
-              CHEF DE PROJET WEB<br/>
-              DEFI-PERFORMANCE<br/>
-              Champagne sur Seine, FR
-              </p>
-            
+              <div className="mb-2 md:mb-5 border-2 p-4">
+                <p className="text-left">2020 / 2022</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  INTÉGRATEUR / DEV FRONT-END
+                  <br />
+                  Solution Medias 360
+                  <br />
+                  Montréal, CA
+                </p>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">2017 / 2020</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  DEV FRONT-END
+                  <br />
+                  ALIZNET
+                  <br />
+                  Paris, FR puis Montréal, CA
+                </p>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">2014 / 2017</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  CHEF DE PROJET WEB
+                  <br />
+                  DEFI-PERFORMANCE
+                  <br />
+                  Champagne sur Seine, FR
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -117,11 +179,28 @@ const MySkills = () => {
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-orange-300 absolute right-0 top-0 z-[-1]" />
-            <p className="mt-5 md:mt-10">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
-              tenetur sed rem libero deserunt id tempora consectetur vero
-              laboriosam.
-            </p>
+            <div className="mt-5 md:mt-10">
+              <div className="mb-2 md:mb-5 border-2 p-4">
+                <p className="text-left">2022</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  Coding Bootcamp - Web Dev
+                  <br />
+                  LEWAGON
+                  <br />
+                  Montréal, CA
+                </p>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">2013 / 2016</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  Master 2 (M2)
+                  <br />
+                  ISC Paris
+                  <br />
+                  Paris, FR
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
         {/* IMAGINATIVE */}
@@ -130,7 +209,7 @@ const MySkills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -144,17 +223,48 @@ const MySkills = () => {
               </p>
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-orange-700 absolute right-0 top-0 z-[-1]" />
-            <p className="mt-5 md:mt-10">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt
-              tenetur sed rem libero deserunt id tempora consectetur vero
-              laboriosam. Nesciunt tenetur sed rem libero deserunt id tempora
-              consectetur vero laboriosam.
-            </p>
+            <div className="mt-5 md:mt-10">
+              <div className="mb-2 md:mb-5 border-2 p-4">
+                <p className="text-left">2022</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  La musique
+                  <br />
+                  LA VIE
+                  <br />
+                  Le monde entier, Co
+                </p>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">2013 / 2016</p>
+                <p className="mt-1 md:mt-3 text-center">
+                  Master 2 (M2)
+                  <br />
+                  ISC Paris
+                  <br />
+                  Paris, FR
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
 
-      <div className="mt-10">LANGUAGE & TOOLS</div>
+      <div className="mt-10 mb-6">LANGUAGE & TOOLS</div>
+      <div className="flex gap-3 mb-4">
+        {langages.map((item, index) => (
+          <Skill key={index} iconeSrc={item.icone} id={item.name} />
+        ))}
+      </div>
+      <div className="flex gap-3 mb-4">
+        {tools.map((item, index) => (
+          <Skill key={index} iconeSrc={item.icone} id={item.name} />
+        ))}
+      </div>
+      <div className="flex gap-3 mb-4">
+        {designs.map((item, index) => (
+          <Skill key={index} iconeSrc={item.icone} id={item.name} />
+        ))}
+      </div>
     </section>
   );
 };
