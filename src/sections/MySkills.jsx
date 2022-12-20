@@ -126,7 +126,7 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-orange-500 absolute right-0 top-0 z-[-1]" />
             <div className="mt-5 md:mt-10">
-              <div className="mb-2 md:mb-5 border-2 p-4">
+              <div className="mb-2 md:mb-5 border-2 p-5">
                 <p className="text-left">2020 / 2022</p>
                 <p className="mt-1 md:mt-3 text-center">
                   INTÉGRATEUR / DEV FRONT-END
@@ -136,7 +136,7 @@ const MySkills = () => {
                   Montréal, CA
                 </p>
               </div>
-              <div className="mt-2 md:mt-5 border-2 p-4">
+              <div className="mt-2 md:mt-5 border-2 p-5">
                 <p className="text-left">2017 / 2020</p>
                 <p className="mt-1 md:mt-3 text-center">
                   DEV FRONT-END
@@ -146,7 +146,7 @@ const MySkills = () => {
                   Paris, FR puis Montréal, CA
                 </p>
               </div>
-              <div className="mt-2 md:mt-5 border-2 p-4">
+              <div className="mt-2 md:mt-5 border-2 p-5">
                 <p className="text-left">2014 / 2017</p>
                 <p className="mt-1 md:mt-3 text-center">
                   CHEF DE PROJET WEB
@@ -180,7 +180,7 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-orange-300 absolute right-0 top-0 z-[-1]" />
             <div className="mt-5 md:mt-10">
-              <div className="mb-2 md:mb-5 border-2 p-4">
+              <div className="mb-2 md:mb-5 border-2 p-5">
                 <p className="text-left">2022</p>
                 <p className="mt-1 md:mt-3 text-center">
                   Coding Bootcamp - Web Dev
@@ -190,7 +190,7 @@ const MySkills = () => {
                   Montréal, CA
                 </p>
               </div>
-              <div className="mt-2 md:mt-5 border-2 p-4">
+              <div className="mt-2 md:mt-5 border-2 p-5">
                 <p className="text-left">2013 / 2016</p>
                 <p className="mt-1 md:mt-3 text-center">
                   Master 2 (M2)
@@ -204,7 +204,7 @@ const MySkills = () => {
           </div>
         </motion.div>
         {/* IMAGINATIVE */}
-        <motion.div
+        {/* <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
           whileInView="visible"
@@ -246,25 +246,76 @@ const MySkills = () => {
               </div>
             </div>
           </div>
+        </motion.div> */}
+        <motion.div
+          className="md:w-1/3 mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="relative">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl">03</p>
+              <p className="font-playfair font-semibold text-2xl mt-3 min-h-[64px]">
+                Language & Tools
+              </p>
+            </div>
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-700 absolute right-0 top-0 z-[-1]" />
+            <div className="mt-5 md:mt-10">
+              <div className="mb-2 md:mb-5 border-2 p-4">
+                <p className="text-left">Language</p>
+                <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
+                  {langages.map((item, index) => (
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                  ))}
+                </div>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">Software</p>
+                <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
+                  {tools.map((item, index) => (
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                  ))}
+                </div>
+              </div>
+              <div className="mt-2 md:mt-5 border-2 p-4">
+                <p className="text-left">Design</p>
+                <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
+                  {designs.map((item, index) => (
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
 
-      <div className="mt-10 mb-6">LANGUAGE & TOOLS</div>
-      <div className="flex gap-3 mb-4">
+      {/* <div className="">
+        <p className="font-playfair font-semibold text-2xl mt-3 min-h-[64px]">
+          LANGUAGE & TOOLS
+        </p>
+      </div>
+      <div className="flex gap-3 mb-4 justify-between">
         {langages.map((item, index) => (
           <Skill key={index} iconeSrc={item.icone} id={item.name} />
         ))}
       </div>
-      <div className="flex gap-3 mb-4">
+      <div className="flex gap-3 mb-4 justify-between">
         {tools.map((item, index) => (
           <Skill key={index} iconeSrc={item.icone} id={item.name} />
         ))}
       </div>
-      <div className="flex gap-3 mb-4">
+      <div className="flex gap-3 mb-4 justify-between">
         {designs.map((item, index) => (
           <Skill key={index} iconeSrc={item.icone} id={item.name} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

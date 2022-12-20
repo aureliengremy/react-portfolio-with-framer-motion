@@ -35,7 +35,6 @@ const Landing = ({ setSelectedPage }) => {
     );
   }
   useEffect(() => {
-    // console.log(imgElement.current);
     setImgWidth(imgElement.current ? imgElement.current.clientWidth : 0);
     setImgHeight(imgElement.current ? imgElement.current.clientHeight : 0);
     setCliRect(
