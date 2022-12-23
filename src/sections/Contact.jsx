@@ -22,22 +22,22 @@ const Contact = ({ setSelectedPage }) => {
 
   //   }
   // };
-  const onSubmit = () => {
-    fetch("https://formsubmit.co/ajax/zodexa", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name: "FormSubmit",
-        message: "I'm from Devro LABS",
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
-  };
+  // const onSubmit = () => {
+  //   fetch("https://formsubmit.co/ajax/zodexa", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       name: "FormSubmit",
+  //       message: "I'm from Devro LABS",
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.log(error));
+  // };
 
   return (
     <section id="contact" className="py-16 md:py-32 lg:py-48 xl:py-52 h-full flex flex-col justify-center">
@@ -126,8 +126,8 @@ const Contact = ({ setSelectedPage }) => {
     <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
   </form> */}
               <form
-                action="https://formsubmit.co/ajax/zodexa"
-                onSubmit={onSubmit}
+                action="https://formsubmit.co/gremy.aurelien@gmail.com"
+                // onSubmit={onSubmit}
                 method="POST"
               >
                 <input
@@ -137,6 +137,7 @@ const Contact = ({ setSelectedPage }) => {
                 />
                 <input
                   type="text"
+                  name="name"
                   className="w-full bg-orange-200 text-gray-900 font-semibold placeholder-opaque-black p-3"
                   placeholder="NAME"
                   required
@@ -155,6 +156,7 @@ const Contact = ({ setSelectedPage }) => {
                 />
                 <input
                   type="email"
+                  name="email"
                   className="w-full bg-orange-200 text-gray-900 font-semibold placeholder-opaque-black p-3 mt-5"
                   placeholder="EMAIL"
                   required
@@ -170,6 +172,7 @@ const Contact = ({ setSelectedPage }) => {
                 />
                 <textarea
                   type="text"
+                  name="message"
                   className="w-full bg-orange-200 text-gray-900 font-semibold placeholder-opaque-black p-3 mt-5"
                   placeholder="MESSAGE"
                   rows="4"
