@@ -55,8 +55,8 @@ const Landing = ({ setSelectedPage }) => {
       className="md:flex md:justify-between md:items-center md:h-full gap-16 py-12 md:py-24"
     >
       {/* IMAGE SECTION */}
-      <div className="md:order-2 flex justify-center basis-6/12 z-10 mt-16 md:mt-32">
-        {isAboveMediumScreens ? (
+      <div className="md:order-2 flex justify-center basis-6/12 z-10 mt-16 md:mt-32 xs:my-36">
+        {/* {isAboveMediumScreens ? ( */}
           <div
             className="relative z-0 ml-20 before:absolute before:-top-10
             before:-left-10 before:w-full before:max-w-[450px]
@@ -74,7 +74,7 @@ const Landing = ({ setSelectedPage }) => {
               </div>
             </div>
           </div>
-        ) : (
+        {/*) : ( 
           <div
             className="relative z-0 m-10 ml-10 before:absolute before:-top-1
             before:-left-5 before:w-[110%] before:max-w-[450px]
@@ -87,7 +87,7 @@ const Landing = ({ setSelectedPage }) => {
                       w-full max-w-[400px] md:max-w-[600px]"
             />
           </div>
-        )}
+        )} */}
       </div>
       <div className="z-30 basis-6/12 mt-12 md:mt-32">
         {/* HEADINGS */}
