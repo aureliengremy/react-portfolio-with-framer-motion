@@ -9,6 +9,7 @@ import LineGradient from "./components/LineGradient";
 import { useEffect } from "react";
 import Projects from "./sections/Projects";
 import ContextProvider from "./context/langContext";
+import Footer from "./sections/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -50,8 +51,9 @@ function App() {
           <Projects />
         </div>
         <LineGradient />
-        <div className="w-5/6 mx-auto md:h-full">
+        <div className="w-5/6 mx-auto">
           <Contact />
+          <Footer />
         </div>
       </div>
     </ContextProvider>

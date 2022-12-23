@@ -40,7 +40,7 @@ const Contact = ({ setSelectedPage }) => {
   // };
 
   return (
-    <section id="contact" className="py-16 md:py-32 lg:py-48 xl:py-52 h-full flex flex-col justify-center">
+    <section id="contact" className="py-16 md:py-48 lg:py-52 xl:py-64 h-full flex flex-col justify-center">
       <div>
         {/* HEADING */}
         <motion.div
