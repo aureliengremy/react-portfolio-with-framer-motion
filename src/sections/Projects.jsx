@@ -39,7 +39,7 @@ const Project = ({ title }) => {
         </p>
       </div>
       <img
-        className="object-cover"
+        className="object-cover h-full"
         src={`../assets/${projectTitle}.png`}
         alt={`${title} screenshot`}
       />
