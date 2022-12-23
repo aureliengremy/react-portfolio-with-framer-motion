@@ -271,7 +271,7 @@ const MySkills = () => {
                 <p className="text-left">Language</p>
                 <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
                   {langages.map((item, index) => (
-                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} icoName={item.name} />
                   ))}
                 </div>
               </div>
@@ -279,7 +279,7 @@ const MySkills = () => {
                 <p className="text-left">Software</p>
                 <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
                   {tools.map((item, index) => (
-                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} icoName={item.name} />
                   ))}
                 </div>
               </div>
@@ -287,7 +287,7 @@ const MySkills = () => {
                 <p className="text-left">Design</p>
                 <div className="grid grid-cols-5 gap-1 mt-1 md:mt-3">
                   {designs.map((item, index) => (
-                    <Skill key={index} iconeSrc={item.icone} id={item.name} />
+                    <Skill key={index} iconeSrc={item.icone} id={item.name} icoName={item.name}/>
                   ))}
                 </div>
               </div>
