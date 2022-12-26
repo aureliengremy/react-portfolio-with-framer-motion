@@ -70,7 +70,7 @@ const Landing = ({ setSelectedPage }) => {
             >
               <div className="profile-card__wrapper">
                 <div className="profile-card__3d">
-                  <img src="../assets/profile-heigh-full.jpg" alt="" />
+                  <img src="../assets/profile-heigh-full.jpeg" alt="" />
                 </div>
               </div>
             </div>
@@ -129,8 +129,8 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainorange text-deep-blue rounded-sm py-3 px-7 font-semibold 
-            hover:bg-gradient-rainorange-reverse hover:text-grey"
+            className="bg-orange-500 text-deep-blue rounded-l-sm py-3 px-7 font-semibold transition duration-400
+            hover:bg-amber-400"
             href="#contact"
             onClick={() => setSelectedPage(setSelectedPage)}
           >
