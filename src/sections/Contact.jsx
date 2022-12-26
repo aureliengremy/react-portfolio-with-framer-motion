@@ -194,8 +194,8 @@ const Contact = ({ setSelectedPage }) => {
                 />
                 <button
                   type="submit"
-                  className="p-5 bg-gradient-rainorange font-semibold text-deep-blue mt-5
-                hover:bg-gradient-rainorange-reverse hover:text-white transition duration-500"
+                  className="p-5 font-semibold text-deep-blue mt-5
+                  bg-orange-500 hover:bg-amber-400 transition duration-400"
                 >
                   SEND ME A MESSAGE
                 </button>
