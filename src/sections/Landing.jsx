@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import { useRef, useState, useEffect, useContext } from "react";
-import { Context } from '../context/langContext';
-import data from '../assets/contentData';
+import { Context } from "../context/langContext";
+import data from "../assets/contentData";
 
 const Landing = ({ setSelectedPage }) => {
-  const { lang } = useContext(Context);
+  // const { lang } = useContext(Context);
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -57,24 +57,24 @@ const Landing = ({ setSelectedPage }) => {
       {/* IMAGE SECTION */}
       <div className="md:order-2 flex justify-center basis-6/12 z-10 mt-16 md:mt-32 xs:my-36">
         {/* {isAboveMediumScreens ? ( */}
-          <div
-            className="relative z-0 ml-6 before:-top-5
+        <div
+          className="relative z-0 ml-6 before:-top-5
             before:-left-5 md:ml-20 before:absolute md:before:-top-10
             md:before:-left-10 before:w-full before:max-w-[450px]
             before:h-full before:border-2 before:border-orange-400 before:z-[-1]"
+        >
+          <div
+            className="profile-card w-[320px] h-[460px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[750px]"
+            ref={imgElement}
+            onMouseMove={(ev) => handleMouseMove(ev)}
           >
-            <div
-              className="profile-card w-[320px] h-[460px] lg:w-[400px] lg:h-[600px] xl:w-[500px] xl:h-[750px]"
-              ref={imgElement}
-              onMouseMove={(ev) => handleMouseMove(ev)}
-            >
-              <div className="profile-card__wrapper">
-                <div className="profile-card__3d">
-                  <img src="../assets/profile-heigh-full.jpeg" alt="" />
-                </div>
+            <div className="profile-card__wrapper">
+              <div className="profile-card__3d">
+                <img src="../assets/profile-heigh-full.jpeg" alt="" />
               </div>
             </div>
           </div>
+        </div>
         {/*) : ( 
           <div
             className="relative z-0 m-10 ml-10 before:absolute before:-top-1
@@ -113,7 +113,10 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
           <p className="mt-14 mb-7 text-sm text-center mb:text-start">
-          {data[lang].landing.description}
+            {/* {data[lang].landing.description} */}
+            Titulaire d’une maîtrise en e-Business et e-Marketing, complétée par
+            ma passion pour Internet et l’informatique. Curieux de toujours
+            comprendre au mieux le fonctionnement des technologies du web.
           </p>
         </motion.div>
         {/* CALL TO ACTION */}

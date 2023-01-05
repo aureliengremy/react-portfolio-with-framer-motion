@@ -8,7 +8,7 @@ import Contact from "./sections/Contact";
 import LineGradient from "./components/LineGradient";
 import { useEffect } from "react";
 import Projects from "./sections/Projects";
-import ContextProvider from "./context/langContext";
+// import ContextProvider from "./context/langContext";
 import Footer from "./sections/Footer";
 
 function App() {
