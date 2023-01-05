@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <ContextProvider>
+    // <ContextProvider>
       <div className="app bg-deep-blue">
         <Navbar
           isTopOfPage={isTopOfPage}
@@ -56,7 +56,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </ContextProvider>
+    // </ContextProvider>
   );
 }
 
