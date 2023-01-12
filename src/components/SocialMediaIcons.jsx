@@ -54,7 +54,7 @@ const SocialMediaIcons = () => {
           <a
             key={key}
             href={value}
-            className="hover:opacity-50 transition duration-500"
+            className="shadow-effect m-2 transition duration-500"
             target="_blank"
             rel="noopener noreferrer"
           >

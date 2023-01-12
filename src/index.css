@@ -57,3 +57,34 @@ body,
   position: absolute;
   inset: 0;
 }
+
+.shadow-effect {
+  position: relative;
+}
+.shadow-effect:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: height 1.2s;
+  width: 28px;
+  height: 0px;
+  background: #fff;
+  /*   transform: translateZ(-300px); */
+  transform: rotateX(55deg) translateZ(-35px);
+  border-radius: 50%;
+  filter: blur(12px);
+  box-shadow: 0 0 1px rgba(255,255,255,0.8);
+}
+.shadow-effect:hover:before {
+  height: 15px;
+}
+
+.shadow-effect svg {
+  transform: none;
+  transition: transform 1s;
+}
+.shadow-effect svg:hover {
+  transform: rotateX(35deg) translateZ(20px)
+    scale(1.2);
+}
